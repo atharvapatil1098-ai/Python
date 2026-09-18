@@ -1,0 +1,26 @@
+import time
+
+timep = int(input("ENTER THE TIME FOR THE TIMER IN SECONDS: "))
+while timep <= 0:
+    print("Please enter a positive number.")
+    timep = int(input("ENTER THE TIME FOR THE TIMER IN SECONDS: "))
+ 
+print("Timer started for", timep, "seconds.")
+
+for x in range(timep, 0, -1):
+
+    seconds = x % 60
+    minutes = int(x / 60)%60
+    hours = int((x / 60) / 60)
+
+    if x == 5:
+            {
+                print("5 seconds remaining!")
+            }
+    time.sleep(1)
+    
+
+    print(f"{hours:02}:{minutes:02}:{seconds:02}") 
+
+    
+print("Time's up!") 
