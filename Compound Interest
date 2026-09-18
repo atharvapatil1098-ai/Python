@@ -1,0 +1,24 @@
+princip = 0;
+rate = 0;
+time = 0;
+
+while princip <= 0:
+    princip = float(input("Enter the principal amount   "))
+    if princip <= 0:
+        print("Principal amount must be greater than 0. Please try again.") 
+
+while rate <= 0:
+    rate = float(input("Enter the annual interest rate (as a percentage, : "))
+    if rate <= 0:
+        print("Annual interest rate must be greater than 0. Please try again.")
+
+while time <= 0:
+    time = float(input("Enter the time in years : "))
+    if time <= 0:
+        print("Time must be greater than 0. Please try again.")
+
+print(f"Principal: {princip}")
+print(f"Annual Interest Rate: {rate}%")
+print(f"Time: {time} years")
+print(f"Compound Interest: {princip * (1 + rate / 100) ** time - princip:.2f}")            
+print(f"Total Amount after {time} years: {princip * (1 + rate / 100) ** time:.2f}")
